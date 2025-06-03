@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,25 +7,26 @@
   <title>NEUROPET | 반려동물의 감정과 통증을 읽는 AI BCI</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
-      background: #fefefe;
+      background: linear-gradient(to bottom, #fff5f0, #fefefe);
       color: #333;
       line-height: 1.6;
     }
     header {
       background: linear-gradient(to right, #f8dcd2, #f9e8e1);
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 15px;
     }
     header p {
       font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
     }
     section {
       padding: 60px 20px;
@@ -34,26 +36,30 @@
     .card {
       background: white;
       border-radius: 16px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      padding: 30px;
-      margin-bottom: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      padding: 40px;
+      margin-bottom: 50px;
     }
     .card h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 1.05rem;
     }
     .card img {
       width: 100%;
-      border-radius: 12px;
-      margin-top: 20px;
+      border-radius: 16px;
+      margin-top: 25px;
     }
     form {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      margin-top: 20px;
     }
     input, textarea {
-      padding: 12px;
+      padding: 14px;
       border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 1rem;
@@ -61,7 +67,7 @@
     button {
       background: #ff6f61;
       color: white;
-      padding: 14px;
+      padding: 16px;
       border: none;
       border-radius: 8px;
       font-size: 1rem;
@@ -72,55 +78,63 @@
       background: #e65b50;
     }
     footer {
-      background: #fafafa;
+      background: #f5f5f5;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       font-size: 0.9rem;
-      color: #888;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>NEUROPET</h1>
-    <p>반려동물의 감정과 통증, 이제는 기술로 들을 수 있습니다.</p>
+    <p>반려동물의 감정과 통증을 이제는 기술로 이해할 수 있습니다.<br />
+       더 깊은 유대, 더 빠른 치료, 더 행복한 공존을 위한 새로운 시작입니다.</p>
   </header>
 
   <section>
     <div class="card">
-      <h2>🐶 반려동물의 감정을 이해하다</h2>
-      <p>우리와 함께 살아가는 반려동물은 말하지 못합니다. 하지만 그들의 감정은 뇌파를 통해 표현됩니다. NEUROPET은 털실모자 형태의 센서를 통해 뇌파를 측정하고, AI로 실시간 분석하여 감정 상태를 보호자에게 전달합니다.</p>
-      <img src="image1.jpg" alt="고양이 이미지" />
+      <h2>🐾 반려동물의 감정을 읽는 기술</h2>
+      <p>NEUROPET은 반려동물의 뇌파를 측정하고, AI 분석을 통해 보호자에게 실시간으로 감정 상태를 전달합니다. 행복, 불안, 슬픔을 이제는 데이터로 이해할 수 있습니다.</p>
+      <img src="image1.jpg" alt="감성적인 고양이 이미지" />
     </div>
 
     <div class="card">
-      <h2>❤️ 통증을 조기에 감지하여 건강을 지키다</h2>
-      <p>NEUROPET은 감정뿐 아니라 통증 신호도 탐지합니다. 슬픔, 불안, 통증의 패턴을 구분하여, 반려동물이 더 심하게 아프기 전에 병원에 갈 수 있도록 도와줍니다.</p>
-      <img src="image2.jpg" alt="감정 교류 이미지" />
+      <h2>🧠 통증을 조기에 감지하여 건강을 지키다</h2>
+      <p>NEUROPET은 통증 신호를 판별하여, 만성화되기 전에 병원에 방문할 수 있게 돕습니다. 단순한 예방을 넘어, 생명을 지키는 조기경보가 됩니다.</p>
+      <img src="image2.jpg" alt="감정을 감지하는 보호자와 반려동물" />
     </div>
 
     <div class="card">
-      <h2>🌟 보호자, 수의사, 동물병원을 위한 최고의 도구</h2>
-      <p>보호자에게는 반려동물의 마음을 이해할 수 있는 감성적인 연결을, 수의사에게는 객관적인 진료 보조 자료를, 동물병원에는 프리미엄 진료 서비스로 고객 만족도를 높이는 새로운 기회를 제공합니다.</p>
-      <img src="image3.jpg" alt="강아지 고양이 함께 있는 이미지" />
+      <h2>👨‍⚕️ 보호자, 수의사, 동물병원을 위한 도구</h2>
+      <p>보호자에게는 더 나은 이해, 수의사에게는 진료 보조, 동물병원에게는 고급 진료 서비스로 모두에게 가치를 제공합니다.</p>
+      <img src="image3.jpg" alt="기기를 착용한 고양이와 강아지" />
     </div>
 
     <div class="card">
-      <h2>📩 웨이팅리스트 등록하기</h2>
+      <h2>🎁 어떤 제품인가요?</h2>
+      <p>NEUROPET은 귀여운 털실모자 형태의 안전한 하드웨어 기기로 반려동물의 뇌파를 측정합니다. 이 신호는 전용 앱으로 전송되어 AI가 실시간 감정 및 통증을 분석합니다.  
+      <br><br>기기는 착용감이 우수하며 반려동물을 놀라게 하지 않도록 설계되어 있고, 데이터를 기반으로 보호자와 수의사가 빠르게 대응할 수 있도록 도와줍니다.</p>
+      <img src="image4.jpg" alt="기기 설명용 이미지" />
+    </div>
+
+    <div class="card">
+      <h2>📬 웨이팅리스트에 등록하고 가장 먼저 만나보세요</h2>
       <form action="https://formspree.io/f/xdkzorzo" method="POST">
         <input type="text" name="name" placeholder="이름" required />
         <input type="email" name="email" placeholder="이메일" required />
         <label><input type="checkbox" name="pet" value="dog" /> 강아지</label>
         <label><input type="checkbox" name="pet" value="cat" /> 고양이</label>
         <input type="text" name="phone" placeholder="전화번호 (선택)" />
-        <textarea name="message" rows="4" placeholder="하고싶은 말, 원하는 기능 등 (선택)"></textarea>
-        <button type="submit">웨이팅리스트 등록</button>
+        <textarea name="message" rows="4" placeholder="하고 싶은 말, 원하는 기능 등 (선택)"></textarea>
+        <button type="submit">등록하기</button>
       </form>
     </div>
   </section>
 
   <footer>
-    당신의 반려동물이 말할 수 있게 해주세요. NEUROPET은 그 시작입니다.
+    당신의 반려동물이 말할 수 있게 해주세요. NEUROPET이 함께합니다.
   </footer>
 </body>
 </html>
