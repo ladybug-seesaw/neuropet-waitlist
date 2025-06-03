@@ -15,9 +15,13 @@
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(to right, #f8dcd2, #f9e8e1);
-      padding: 80px 20px;
+      background-image: url('header.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
       text-align: center;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
     }
     header h1 {
       font-size: 3rem;
@@ -25,7 +29,7 @@
     }
     header p {
       font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
     }
     section {
@@ -37,18 +41,39 @@
       background: white;
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      padding: 40px;
+      padding: 30px;
       margin-bottom: 50px;
     }
-    .card h2 {
+    .horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+    .horizontal img {
+      flex: 1 1 300px;
+      max-width: 45%;
+      border-radius: 16px;
+    }
+    .horizontal .text {
+      flex: 1 1 300px;
+    }
+    .horizontal h2 {
       font-size: 1.6rem;
       margin-bottom: 10px;
     }
-    .card p {
+    .horizontal p {
       font-size: 1.05rem;
     }
-    .card img {
+    .card img.standard {
       width: 100%;
+      border-radius: 16px;
+      margin-top: 25px;
+    }
+    .card img.taller {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
       border-radius: 16px;
       margin-top: 25px;
     }
@@ -84,6 +109,14 @@
       font-size: 0.9rem;
       color: #666;
     }
+    @media (max-width: 768px) {
+      .horizontal {
+        flex-direction: column;
+      }
+      .horizontal img, .horizontal .text {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -94,29 +127,31 @@
   </header>
 
   <section>
+    <div class="card horizontal">
+      <img src="image4.jpg" alt="기기 설명 이미지" />
+      <div class="text">
+        <h2>🎁 어떤 제품인가요?</h2>
+        <p>NEUROPET은 귀여운 털실모자 형태의 안전한 하드웨어 기기로 반려동물의 뇌파를 측정합니다. 이 신호는 전용 앱으로 전송되어 AI가 실시간 감정 및 통증을 분석합니다.<br><br>
+        기기는 착용감이 우수하며 반려동물을 놀라게 하지 않도록 설계되어 있고, 데이터를 기반으로 보호자와 수의사가 빠르게 대응할 수 있도록 도와줍니다.</p>
+      </div>
+    </div>
+
     <div class="card">
       <h2>🐾 반려동물의 감정을 읽는 기술</h2>
       <p>NEUROPET은 반려동물의 뇌파를 측정하고, AI 분석을 통해 보호자에게 실시간으로 감정 상태를 전달합니다. 행복, 불안, 슬픔을 이제는 데이터로 이해할 수 있습니다.</p>
-      <img src="image1.jpg" alt="감성적인 고양이 이미지" />
+      <img src="image1.jpg" alt="감성적인 고양이 이미지" class="standard" />
     </div>
 
     <div class="card">
       <h2>🧠 통증을 조기에 감지하여 건강을 지키다</h2>
       <p>NEUROPET은 통증 신호를 판별하여, 만성화되기 전에 병원에 방문할 수 있게 돕습니다. 단순한 예방을 넘어, 생명을 지키는 조기경보가 됩니다.</p>
-      <img src="image2.jpg" alt="감정을 감지하는 보호자와 반려동물" />
+      <img src="image2.jpg" alt="감정을 감지하는 보호자와 반려동물" class="taller" />
     </div>
 
     <div class="card">
       <h2>👨‍⚕️ 보호자, 수의사, 동물병원을 위한 도구</h2>
       <p>보호자에게는 더 나은 이해, 수의사에게는 진료 보조, 동물병원에게는 고급 진료 서비스로 모두에게 가치를 제공합니다.</p>
-      <img src="image3.jpg" alt="기기를 착용한 고양이와 강아지" />
-    </div>
-
-    <div class="card">
-      <h2>🎁 어떤 제품인가요?</h2>
-      <p>NEUROPET은 귀여운 털실모자 형태의 안전한 하드웨어 기기로 반려동물의 뇌파를 측정합니다. 이 신호는 전용 앱으로 전송되어 AI가 실시간 감정 및 통증을 분석합니다.  
-      <br><br>기기는 착용감이 우수하며 반려동물을 놀라게 하지 않도록 설계되어 있고, 데이터를 기반으로 보호자와 수의사가 빠르게 대응할 수 있도록 도와줍니다.</p>
-      <img src="image4.jpg" alt="기기 설명용 이미지" />
+      <img src="image3.jpg" alt="기기를 착용한 고양이와 강아지" class="standard" />
     </div>
 
     <div class="card">
