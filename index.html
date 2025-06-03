@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEUROPET - 감정과 통증을 읽는 반려동물 BCI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #fefefe;
+      color: #333;
+    }
+    header.hero {
+      background: linear-gradient(120deg, #90caf9, #a5d6a7);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    header.hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    header.hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .cta-button {
+      background: #fff;
+      color: #2e7d32;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      background: #2e7d32;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1b5e20;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #f1f1f1;
+      color: #555;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>말하지 못하는 감정과 통증,<br>이제는 읽을 수 있습니다</h1>
+    <p>AI 기반 웨어러블 BCI로 개와 고양이의 감정을 실시간으로 이해하세요.</p>
+    <a href="#waitlist" class="cta-button">등록하고 가장 먼저 만나보기</a>
+  </header>
+
+  <section class="about">
+    <h2>NEUROPET이란?</h2>
+    <p>
+      NEUROPET은 털실모자 형태의 웨어러블 기기를 반려동물에게 착용시켜,
+      뇌파를 실시간으로 측정하고 감정 상태와 통증 유무를 분석하는
+      AI 기반 하드웨어·소프트웨어 제품입니다. 앱을 통해 보호자는 반려동물의 상태를 실시간으로 확인할 수 있습니다.
+    </p>
+    <ul>
+      <li>실시간 감정 분석</li>
+      <li>통증 감지 및 조기 치료</li>
+      <li>앱 알림 & 사용자 맞춤 리포트</li>
+    </ul>
+  </section>
+
+  <section class="target">
+    <h2>누구에게 필요한가요?</h2>
+    <p>
+      NEUROPET은 반려동물 보호자, 수의사, 동물병원을 위한 제품입니다.<br>
+      감정과 통증을 실시간으로 확인함으로써 더 깊은 유대와 빠른 조치를 가능하게 합니다.
+    </p>
+  </section>
+
+  <section id="waitlist" class="form-section">
+    <h2>웨이팅리스트 등록</h2>
+    <form id="waitlist-form">
+      <label for="name">이름 *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">이메일 *</label>
+      <input type="email" id="email" name="email" required />
+
+      <fieldset>
+        <legend>반려동물 종류 *</legend>
+        <label><input type="checkbox" name="animal" value="dog" required /> 개</label>
+        <label><input type="checkbox" name="animal" value="cat" required /> 고양이</label>
+      </fieldset>
+
+      <label for="phone">전화번호 (선택)</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="message">하고 싶은 말 (선택)</label>
+      <textarea id="message" name="message" rows="4" placeholder="이 제품을 원하는 이유, 바라는 기능 등을 자유롭게 적어주세요"></textarea>
+
+      <button type="submit">등록하기</button>
+    </form>
+    <p id="form-response"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 NEUROPET. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-response').textContent = "감사합니다! NEUROPET 출시 시 가장 먼저 알려드릴게요.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
