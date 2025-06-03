@@ -13,20 +13,24 @@
       background: #fefefe;
       color: #333;
     }
+
     header.hero {
       background: linear-gradient(120deg, #90caf9, #a5d6a7);
       color: #fff;
       text-align: center;
       padding: 5rem 1rem;
     }
+
     header.hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
     header.hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
+
     .cta-button {
       background: #fff;
       color: #2e7d32;
@@ -37,32 +41,39 @@
       text-decoration: none;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
+
     section {
       padding: 3rem 1.5rem;
       max-width: 800px;
       margin: auto;
     }
+
     h2 {
       color: #2e7d32;
     }
+
     ul {
       list-style-type: square;
       padding-left: 1.5rem;
     }
+
     .form-section form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
+
     label {
       font-weight: bold;
     }
+
     input, textarea {
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
     }
+
     button {
       background: #2e7d32;
       color: white;
@@ -72,9 +83,11 @@
       font-size: 1rem;
       cursor: pointer;
     }
+
     button:hover {
       background: #1b5e20;
     }
+
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -115,7 +128,9 @@
 
   <section id="waitlist" class="form-section">
     <h2>웨이팅리스트 등록</h2>
-    <form id="waitlist-form">
+    <form action="https://formspree.io/f/xdkzorzo" method="POST">
+      <input type="hidden" name="_subject" value="New NEUROPET Waitlist Submission" />
+
       <label for="name">이름 *</label>
       <input type="text" id="name" name="name" required />
 
@@ -124,8 +139,8 @@
 
       <fieldset>
         <legend>반려동물 종류 *</legend>
-        <label><input type="checkbox" name="animal" value="dog" required /> 개</label>
-        <label><input type="checkbox" name="animal" value="cat" required /> 고양이</label>
+        <label><input type="checkbox" name="animal" value="개" required /> 개</label>
+        <label><input type="checkbox" name="animal" value="고양이" required /> 고양이</label>
       </fieldset>
 
       <label for="phone">전화번호 (선택)</label>
@@ -136,19 +151,10 @@
 
       <button type="submit">등록하기</button>
     </form>
-    <p id="form-response"></p>
   </section>
 
   <footer>
     <p>© 2025 NEUROPET. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('form-response').textContent = "감사합니다! NEUROPET 출시 시 가장 먼저 알려드릴게요.";
-      this.reset();
-    });
-  </script>
 </body>
 </html>
