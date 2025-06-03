@@ -15,13 +15,25 @@
       line-height: 1.6;
     }
     header {
+      position: relative;
       background-image: url('header.jpg');
       background-size: cover;
       background-position: center;
-      padding: 100px 20px;
       text-align: center;
-      color: #fff;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+      color: white;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);  /* 어두운 오버레이 */
+      z-index: 1;
+    }
+    header .content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 20px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
     }
     header h1 {
       font-size: 3rem;
@@ -34,48 +46,39 @@
     }
     section {
       padding: 60px 20px;
-      max-width: 960px;
+      max-width: 1000px;
       margin: auto;
     }
     .card {
       background: white;
       border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      padding: 30px;
-      margin-bottom: 50px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      padding: 40px;
+      margin-bottom: 60px;
     }
     .horizontal {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 40px;
       align-items: center;
+      min-height: 360px;
     }
     .horizontal img {
-      flex: 1 1 300px;
+      flex: 1 1 380px;
       max-width: 45%;
+      height: 280px;
+      object-fit: cover;
       border-radius: 16px;
     }
     .horizontal .text {
-      flex: 1 1 300px;
+      flex: 1 1 380px;
     }
     .horizontal h2 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
+      font-size: 1.7rem;
+      margin-bottom: 12px;
     }
     .horizontal p {
       font-size: 1.05rem;
-    }
-    .card img.standard {
-      width: 100%;
-      border-radius: 16px;
-      margin-top: 25px;
-    }
-    .card img.taller {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 16px;
-      margin-top: 25px;
     }
     form {
       display: flex;
@@ -116,14 +119,19 @@
       .horizontal img, .horizontal .text {
         max-width: 100%;
       }
+      .horizontal img {
+        height: auto;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>NEUROPET</h1>
-    <p>반려동물의 감정과 통증을 이제는 기술로 이해할 수 있습니다.<br />
-       더 깊은 유대, 더 빠른 치료, 더 행복한 공존을 위한 새로운 시작입니다.</p>
+    <div class="content">
+      <h1>NEUROPET</h1>
+      <p>반려동물의 감정과 통증을 이제는 기술로 이해할 수 있습니다.<br />
+         더 깊은 유대, 더 빠른 치료, 더 행복한 공존을 위한 새로운 시작입니다.</p>
+    </div>
   </header>
 
   <section>
@@ -136,22 +144,28 @@
       </div>
     </div>
 
-    <div class="card">
-      <h2>🐾 반려동물의 감정을 읽는 기술</h2>
-      <p>NEUROPET은 반려동물의 뇌파를 측정하고, AI 분석을 통해 보호자에게 실시간으로 감정 상태를 전달합니다. 행복, 불안, 슬픔을 이제는 데이터로 이해할 수 있습니다.</p>
-      <img src="image1.jpg" alt="감성적인 고양이 이미지" class="standard" />
+    <div class="card horizontal">
+      <img src="image1.jpg" alt="감성적인 고양이 이미지" />
+      <div class="text">
+        <h2>🐾 반려동물의 감정을 읽는 기술</h2>
+        <p>NEUROPET은 반려동물의 뇌파를 측정하고, AI 분석을 통해 보호자에게 실시간으로 감정 상태를 전달합니다. 행복, 불안, 슬픔을 이제는 데이터로 이해할 수 있습니다.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>🧠 통증을 조기에 감지하여 건강을 지키다</h2>
-      <p>NEUROPET은 통증 신호를 판별하여, 만성화되기 전에 병원에 방문할 수 있게 돕습니다. 단순한 예방을 넘어, 생명을 지키는 조기경보가 됩니다.</p>
-      <img src="image2.jpg" alt="감정을 감지하는 보호자와 반려동물" class="taller" />
+    <div class="card horizontal">
+      <img src="image2.jpg" alt="감정을 감지하는 보호자와 반려동물" />
+      <div class="text">
+        <h2>🧠 통증을 조기에 감지하여 건강을 지키다</h2>
+        <p>NEUROPET은 통증 신호를 판별하여, 만성화되기 전에 병원에 방문할 수 있게 돕습니다. 단순한 예방을 넘어, 생명을 지키는 조기경보가 됩니다.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>👨‍⚕️ 보호자, 수의사, 동물병원을 위한 도구</h2>
-      <p>보호자에게는 더 나은 이해, 수의사에게는 진료 보조, 동물병원에게는 고급 진료 서비스로 모두에게 가치를 제공합니다.</p>
-      <img src="image3.jpg" alt="기기를 착용한 고양이와 강아지" class="standard" />
+    <div class="card horizontal">
+      <img src="image3.jpg" alt="기기를 착용한 고양이와 강아지" />
+      <div class="text">
+        <h2>👨‍⚕️ 보호자, 수의사, 동물병원을 위한 도구</h2>
+        <p>보호자에게는 더 나은 이해, 수의사에게는 진료 보조, 동물병원에게는 고급 진료 서비스로 모두에게 가치를 제공합니다.</p>
+      </div>
     </div>
 
     <div class="card">
